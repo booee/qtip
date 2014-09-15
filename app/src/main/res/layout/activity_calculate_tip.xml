@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".CalculateTip">
+
+    <TextView
+        android:id="@+id/subTotalEditLabel"
+        android:text="Bill Sub Total: $"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/subTotalEdit"
+        android:text="100"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/subTotalEditLabel"/>
+
+    <TextView
+        android:id="@+id/tipViewLabel"
+        android:text="Tip Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subTotalEditLabel"/>
+
+    <TextView
+        android:id="@+id/tipView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tipViewLabel"/>
+
+    <TextView
+        android:id="@+id/totalViewLabel"
+        android:text="Bill Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipView" />
+    <TextView
+        android:id="@+id/totalView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipView"
+        android:layout_toRightOf="@id/totalViewLabel" />
+
+    <Button
+        android:id="@+id/calculateTipSubmit"
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subTotalEdit"
+        android:onClick="onSubmit"/>
+
+
+</RelativeLayout>
